@@ -1,0 +1,16 @@
+# OpenDiscordBots Template
+
+A template bot to use for creating OpenDiscordBots projects.
+
+## Installation
+
+You will need to install `poetry` to run this bot locally for levelopment, but running in docker is preferred for production deployment.
+
+Poetry can be installed using the following command:
+
+- Windows: `py -3 -m pip install poetry`.
+- Linux/Mac: `python3 -m pip install poetry`.
+
+To install the dependencies you can then run `poetry install` in the folder you cloned the repository to.
+
+To run the bot run `poetry run task start`.
