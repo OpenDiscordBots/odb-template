@@ -13,4 +13,6 @@ Poetry can be installed using the following command:
 
 To install the dependencies you can then run `poetry install` in the folder you cloned the repository to.
 
-To run the bot run `poetry run task start`.
+You need to copy `.env.example` to `.env` and fill in the appropriate values.
+
+To run the bot run `poetry run task start` or `docker-compose up` to run with docker.
