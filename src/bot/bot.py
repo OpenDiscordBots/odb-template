@@ -1,12 +1,12 @@
 from traceback import format_exc
 from typing import List
 
-from discord.ext.commands import Bot as _Bot
+from disnake.ext.commands import Bot as _Bot
 from loguru import logger
 
 
 class Bot(_Bot):
-    """A subclass of `discord.ext.commands.Bot` to add functionality."""
+    """A subclass of `disnake.ext.commands.Bot` to add functionality."""
 
     def load_extensions(self, exts: List[str]) -> None:
         ld = 0

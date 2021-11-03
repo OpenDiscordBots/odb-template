@@ -1,4 +1,4 @@
-from discord.ext.commands import Cog, Context, command
+from disnake.ext.commands import Cog, Context, command
 
 from src.bot import Bot
 
