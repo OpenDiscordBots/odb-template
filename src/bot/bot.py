@@ -1,12 +1,19 @@
 from traceback import format_exc
 from typing import List
+from os import environ
 
 from disnake.ext.commands import Bot as _Bot
+from libodb import APIClient
 from loguru import logger
 
 
 class Bot(_Bot):
     """A subclass of `disnake.ext.commands.Bot` to add functionality."""
+
+    def __init__(self, api: APIClient = None, *args, **kwargs) -> None:
+        super().__init__(*args, **kwargs)
+
+        self.api = api or APIClient(environ["API_TOKEN"])
 
     def load_extensions(self, exts: List[str]) -> None:
         ld = 0
