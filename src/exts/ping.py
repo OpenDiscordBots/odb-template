@@ -1,4 +1,5 @@
-from disnake.ext.commands import Cog, Context, command
+from disnake import ApplicationCommandInteraction
+from disnake.ext.commands import Cog, slash_command
 
 from src.bot import Bot
 
@@ -9,11 +10,11 @@ class Ping(Cog):
     def __init__(self, bot: Bot) -> None:
         self.bot = bot
 
-    @command(name="ping")
-    async def ping(self, ctx: Context) -> None:
+    @slash_command(name="ping")
+    async def ping(self, ctx: ApplicationCommandInteraction) -> None:
         """Get the gateway latency of the bot."""
 
-        await ctx.reply(f"Pong! {self.bot.latency*1000:.2f}ms")
+        await ctx.send(f"Pong! {self.bot.latency*1000:.2f}ms", ephemeral=True)
 
 
 def setup(bot: Bot) -> None:
